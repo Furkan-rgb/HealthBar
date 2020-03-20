@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void TakeDamage(int damage)
+    void TakeDamage(int damage) //hiermee update ik de health nadat het vermindert wordt
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
@@ -36,5 +36,6 @@ public class Player : MonoBehaviour
     {
         // StartCoroutine(FlashColor(other));
         TakeDamage(20);
+        Destroy(other.gameObject); //object wordt verwijderd bij een collision
     }
 }
