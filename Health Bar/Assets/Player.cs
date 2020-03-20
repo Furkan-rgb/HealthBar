@@ -31,4 +31,10 @@ public class Player : MonoBehaviour
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // StartCoroutine(FlashColor(other));
+        TakeDamage(20);
+    }
 }
